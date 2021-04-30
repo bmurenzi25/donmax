@@ -1,507 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>{{ config('app.name') }}</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>{{ config('app.name') ?? 'Don Max Creative' }}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Favicons -->
-  <link href=" {{ URL::asset('img/favicon.png') }}" rel="icon">
-  <link href=" {{ URL::asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Vendor CSS Files -->
-  <link href=" {{ URL::asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('vendor/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('vendor/venobox/venobox.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('css/set.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('css/component.css') }}" rel="stylesheet">
-  <link href=" {{ URL::asset('css/normalize.css') }}" rel="stylesheet">
+    <!-- CSS
+    ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ URL::asset('css/base.css')  }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/vendor.css')  }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/main.css')  }}">
 
-  <!-- Template Main CSS File -->
-  <link href=" {{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <!-- script
+    ================================================== -->
+    <script src="{{ URL::asset('js/modernizr.js')  }}"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
-<body id="page-top" style="background: url('../img/bg/home.png') no-repeat, rgb(127, 183, 220);">
 
-  <!-- ======= Header/ Navbar ======= -->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">{{ config('app.name') }}</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll active" href="{{ url('/') }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#clients">Clients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<body id="top">
+
+<!-- preloader
+================================================== -->
+<div id="preloader">
+    <div id="loader" class="dots-jump">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-  </nav>
+</div>
 
-  <section id="hero" class="d-flex align-items-center">
+<!-- header
+================================================== -->
+<header class="s-header">
 
-    <div class="container-fluid" data-aos="fade-up">
-      <div class="row justify-content-center">
-        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h2  data-aos="zoom-in" data-aos-delay="150">We are Don Max Creative!</h2>
-          <h1>We make to make an Impact through Art and Design.</h1>
-          <!-- <div><a href="#portfolio" class="btn-get-started scrollto">Our Portfolio</a></div> -->
-        </div>
-        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <img src="{{ asset('img/bg/homeman.png') }}" class="img-fluid animated" alt=""  data-aos="zoom-in" data-aos-delay="150">
-        </div>
-      </div>
+    <div class="header-logo">
+        <a class="site-logo" href="{{ url('/') }}">
+            <img src="{{ URL::asset('images/logo.svg') }}" alt="Homepage">
+        </a>
+    </div> <!-- end header-logo -->
+
+    <nav class="header-nav">
+
+        <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+        <h3>Navigate to</h3>
+
+        <div class="header-nav__content">
+
+            <ul class="header-nav__list">
+                <li><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About US</a></li>
+                <li><a class="smoothscroll"  href="#services" title="services">Our Services</a></li>
+                <li><a class="smoothscroll"  href="#clients" title="contact">Our Clients</a></li>
+                <li><a class="smoothscroll"  href="#contact" title="contact">Contact US</a></li>
+            </ul>
+
+            <ul class="header-nav__social">
+                <li>
+                    <a href="#0" target="_blank"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+
+        </div> <!-- end header-nav__content -->
+
+    </nav> <!-- end header-nav -->
+
+    <a class="header-menu-toggle" href="#0">
+        <span class="header-menu-icon"></span>
+    </a>
+
+</header> <!-- end s-header -->
+
+
+<!-- home
+================================================== -->
+<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+    <div class="grid-overlay">
+        <div></div>
     </div>
-    <div class="social-icon d-md-block d-sm-none d-xs-none d-xs-block d-sm-block" style="position: absolute; padding-left: 15px; padding-right: 20px; bottom: 30%;">
-      <ul style="list-style: none;" class=" navbar-nav pull-right">
-        <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-        <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-        <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-        <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
-      </ul>
+
+    <div class="home-content">
+
+        <div class="row home-content__main">
+
+            <h1>
+                DON MAX
+            </h1>
+            <h1>
+                CREATIVE
+            </h1>
+
+
+            <h3>
+                We make impact through Art and Design.
+            </h3>
+
+            <div class="home-content__button">
+                <a href="#about" class="smoothscroll btn btn--primary btn--large">
+                    Our Story
+                </a>
+                <a href="#contact" class="smoothscroll btn btn--large">
+                    Get in Touch With Us
+                </a>
+            </div>
+
+        </div> <!-- end home-content__main -->
+
+    </div> <!-- end home-content -->
+
+    <ul class="home-social">
+        <li>
+            <a href="#0" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+    </ul> <!-- end home-social -->
+
+</section> <!-- end s-home -->
+
+
+<!-- about
+================================================== -->
+<section id="about" class="s-about target-section">
+
+    <div class="row section-header bit-narrow" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead">This is Us</h3>
+            <h1 class="display-1">
+                We are Don Max Creative, We aim to make an Impact through Art and Design.
+            </h1>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row bit-narrow" data-aos="fade-up">
+        <div class="col-full">
+            <p class="lead">
+                At Don Max creative, We help companies,institutions and brand to be visible in this
+                new digital world and connect with their audience through Branding, design,digital marketing and website
+                developing.
+                “Briefly we help businesses to grow sales and visibility through branding strategies and digital marketing“
+            </p>
+            <p class="lead">
+                “Doing business without advertising is like winking at a girl in the dark.”
+                Don Max Creative is your way to accelerate your business towards success.
+            </p>
+        </div>
+    </div> <!-- end about-desc -->
+
+    <div class="row bit-narrow">
+
+        <div class="about-process process block-1-2 block-tab-full">
+
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__text">
+                    <h4 class="item-title">OUR HISTORY</h4>
+                    <p>
+                        We started in 2018 as a design and Illustration studio but as our clients were meeting different problems that we believe pour skills could help;
+                        We stepped out for help by offering problem-solving services.
+                    </p>
+                </div>
+            </div>
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__text">
+                    <h4 class="item-title">ABOUT US</h4>
+                    <p>
+                        We help companies, institutions, organizations and brand to communicate to their audience through different
+                        ways like Branding, Graphic Design, UI/UX Design, Website developing, Illustrations and Animations.
+                    </p>
+                </div>
+            </div>
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__text">
+                    <h4 class="item-title">OBJECTIVE</h4>
+                    <p>
+                        Our main objective is to offer you services that fit your budget and always focusing on helping you shape
+                        a strong brand identity that can take your business to the next level.
+                    </p>
+                </div>
+            </div>
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__text">
+                    <h4 class="item-title">PRINCIPLES</h4>
+                    <p>
+                        We and our clients are partners we do the job for the audience, We help you to reach and communicate with
+                        your audience visually, Teamwork is the key to success.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end process -->
+
+    </div> <!-- end row -->
+
+</section> <!-- end s-about -->
+
+
+<!-- services
+================================================== -->
+<section id='services' class="s-services target-section darker">
+
+    <div class="row section-header bit-narrow" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead">What we do</h3>
+            <h1 class="display-1">
+                We take pride in what we do. Our services are designed to help
+                your business stand out and turn your ideas into digital realities.
+            </h1>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row bit-narrow services block-1-2 block-tab-full">
+        @if(count($services) > 0)
+            @foreach($services as $service)
+
+                    <div class="item-service__text" data-aos="fade-up">
+                        <a href="{{ url('/service',$service->id) }}">
+                            <h3 class="item-title">{{ $service->name }}</h3>
+                        </a>
+                        <a class="service__link" href="{{ url('/service',$service->id) }}">
+                            <div class="service__img-container">
+                                <span class="preloader"></span>
+                                <figure class="service__img" style="margin: 1em 0px;">
+                                    <img class="absolute-bg" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" style="width: 100%; height: 550px;"/>
+                                    @foreach($service->projects as $project)
+                                        <img class="absolute-bg" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" style="width: 100%; height: 550px;"/>
+                                    @endforeach
+                                </figure>
+                            </div>
+                        </a>
+                    </div>
+
+            @endforeach
+        @endif
+    </div> <!-- end services -->
+
+
+</section> <!-- end s-services -->
+
+<!-- testimonies
+================================================== -->
+<section class="s-testimonials">
+
+    <div class="testimonials__icon" data-aos="fade-up"></div>
+
+    <div class="row testimonials narrow">
+
+        <div class="col-full testimonials__slider" data-aos="fade-up">
+            @if(count($testimonials))
+                @foreach($testimonials as $testimony)
+
+                    <div class="testimonials__slide">
+                        <p>
+                            {{ $testimony->message ?? 'To be verified before sharing' }}
+                        </p>
+                        <div class="testimonials__author">
+                            {{ $testimony->name ?? 'Anonymous' }}
+                            <span>{{ $testimony->position ?? 'No Position shared' }}</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                @endforeach
+            @endif
+
+        </div> <!-- end testimonials__slider -->
+
+    </div> <!-- end testimonials -->
+
+</section> <!-- end s-testimonials -->
+
+
+<!-- clients
+================================================== -->
+<section id="clients" class="s-clients target-section darker">
+
+    <div class="grid-overlay">
+        <div></div>
     </div>
-  </section>
 
-  <main id="main">
+    <div class="row section-header text-center narrow" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead">Our Clients</h3>
+            <h1 class="display-1">Who we have worked with</h1>
+        </div>
+    </div> <!-- end section-header -->
 
-    <section id="about" class="box-shadow-full about-mf sect-pt4 route">
-      <div class="container">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                About us
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-          <div class="col-sm-12"  data-aos="zoom-in" data-aos-delay="150">
-            <h4>Our History</h4>
-            <h5 class="text-i">
-              We started in 2018 as a design and Illustration studio but as our clients were meeting different problems that we believe pour skills could help; We steped out for help by offering problem-solving 
-              services.
-            </h5>
-          </div>
-          <div class="col-sm-12"  data-aos="zoom-in" data-aos-delay="150">
-            <h4>About Us</h4>
-            <h5 class="text-i">
-              We help companies, institutions, organizations and brand to communicate to their audience through different ways like Branding, Graphic Design, UI/UX Design, Website developing, Illustrations and 
-              Animations.
-            </h5>
-          </div>
-          <div class="col-sm-12">
-            <h4>Objective</h4>
-            <h5 class="text-i">
-              Our main objective is to offer you services that fit your budget and always focusing on helping you shape a strong brand identity that can take your business to the next level.
-            </h5>
-          </div>
-      </div>
-    </section><!-- End About Section -->
+    <section class="customer-logos slider">
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container box-shadow-full"  data-aos="fade-up">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4"  data-aos="fade-up">
-            <div class="work-box">
-              <a href="{{ URL::asset('img/artworks/1.png') }}" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="{{ URL::asset('img/artworks/1.png') }}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title text-center">UI / UX Design</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4"  data-aos="fade-up">
-            <div class="work-box">
-              <a href="{{ route('serviced') }}" data-gall="portfolioGal=lery" class="venbox">
-                <div class="work-img">
-                  <img src="{{ URL::asset('img/artworks/2.png') }}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title text-center">UI / UX Design</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ URL::asset('img/artworks/3.png') }}" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="{{ URL::asset('img/artworks/3.png') }}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title text-center">UI / UX Design</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ URL::asset('img/artworks/4.png') }}" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="{{ URL::asset('img/artworks/4.png') }}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title text-center">UI / UX Design</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ URL::asset('img/artworks/5.png') }}" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="{{ URL::asset('img/artworks/5.png') }}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title text-center">UI / UX Design</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="{{ URL::asset('img/artworks/6.png') }}" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="{{ URL::asset('img/artworks/6.png') }}" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title text-center">UI / UX Design</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
+        @if(count($clients))
+            @foreach($clients as $client)
+                <div class="slide"><img src="{{ URL::asset(Voyager::image($client->logo)) }}"></div>
+            @endforeach
+        @endif
 
-        <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="clients sect-pt4 route">
-      <div class="container box-shadow-full" style="background-color: #fff">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a" style="color: #000">
-                Clients
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/1.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/2.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/3.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/4.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/5.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/6.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/7.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6" style="padding: 7px">
-                <div class="client-logo"> <img src="{{ URL::asset('img/clients/8.png') }}" class="img-fluid" alt=""> </div>
-            </div>
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <section id="team">
-      <div class="container  box-shadow-full">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Team
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="{{ URL::asset('img/team/3.jpg') }}" class="img-team" height="250">
-              </div>
-              <div class="col-md-8 info">
-                <h5 class="t_name">Don Max EL</h5>
-                <p class="t_title">Creative Director</p>
-                <p class="mt-1">
-                  We’re a creative agency based in Kigali - Rwanda driven by the passion of helping Governmental or non governmental institutions to communicate to their audience thro.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="{{ URL::asset('img/team/3.jpg') }}" class="img-team" height="250">
-              </div>
-              <div class="col-md-8 info">
-                <h5 class="t_name">Don Max EL</h5>
-                <p class="t_title">Creative Director</p>
-                <p class="mt-1">
-                  We’re a creative agency based in Kigali - Rwanda driven by the passion of helping Governmental or non governmental institutions to communicate to their audience thro.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row" style="margin-top: 40px">
-          <div class="col">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="{{ URL::asset('img/team/3.jpg') }}" class="img-team" height="250">
-              </div>
-              <div class="col-md-8 info">
-                <h5 class="t_name">Don Max EL</h5>
-                <p class="t_title">Creative Director</p>
-                <p class="mt-1">
-                  We’re a creative agency based in Kigali - Rwanda driven by the passion of helping Governmental or non governmental institutions to communicate to their audience thro.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="{{ URL::asset('img/team/3.jpg') }}" class="img-team" height="250">
-              </div>
-              <div class="col-md-8 info">
-                <h5 class="t_name">Don Max EL</h5>
-                <p class="t_title">Creative Director</p>
-                <p class="mt-1">
-                  We’re a creative agency based in Kigali - Rwanda driven by the passion of helping Governmental or non governmental institutions to communicate to their audience thro.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
+</section> <!-- end s-clients -->
 
-    <!-- ======= Contact Section ======= -->
-    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url('{{ URL::asset('img/bg/contact.jpg') }}')">
-      <div class="overlay-mf"></div>
-      <div class="container box-shadw-full-inv">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Contact US
-              </h3>
-              <div class="line-mf"></div>
-            </div>
-            <div class="contact-mf">
-              <div id="contact">
-                <div class="row">
-                  <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=kk%20720%20st%2022+(Don%20Max%20Creative)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm">Driving Route Planner</a></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Leave a Message
-                      </h5>
-                    </div>
-                    <div>
-                      <form action="#" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center mb-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center mb-3">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead text-white">
-                        <b>We’re a creative agency based in Kigali - Rwanda driven by the passion of helping Governmental or non governmental institutions to communicate to their audience through different creative ways like : Graphic design, UI&UX design, illustrations and animation.</b>
-                      </p>
-                      <div class="row address-sec">
-                        <div class="col">
-                          <a href="tel:(+250) 788 997 825" class="btn btn-primary btn-block btn-lg">Call Our Line 1</a href="tel:">
-                        </div>
-                        <div class="col">
-                          <a href="tel:(+250) 787 191 444" class="btn btn-primary btn-block btn-lg">Call Our Line 2</a>
-                        </div>
-                      </div>
-                      <div class="socials">
-                      <ul>
-                        <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
-                      </ul>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
-  </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>{{ config('app.name') }}</strong>. All Rights Reserved</p>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-              Designed by <a href="#">B. El</a>
-            </div>
-          </div>
+<section id="contact" class="s-styles">
+
+    <div class="row">
+
+        <div class="col-six tab-full">
+
+            <h3> Leave US a Message </h3>
+
+            <form>
+                <div>
+                    <label for="sampleInput">Your email</label>
+                    <input class="full-width" type="email" placeholder="test@gmail.com" id="sampleInput">
+                </div>
+
+                <label for="exampleMessage">Type your Message</label>
+                <textarea class="full-width" placeholder="Your message" id="exampleMessage"></textarea>
+
+                <input class="btn--primary full-width" type="submit" value="Submit">
+
+            </form>
+
         </div>
-      </div>
+
+        <div class="col-six tab-full">
+
+            <h3>Map Directions</h3>
+
+            <div style="width: 100%">
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=kk%20720%20st%2022+(Don%20Max%20Creative)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+
+        </div>
+
+    </div> <!-- end row -->
+
+</section> <!-- end styles -->
+
+<!-- footer
+================================================== -->
+<footer>
+    <div class="row">
+        <div class="col-full ss-copyright">
+            <span>© {{ config('app.name') }}</span>
+            <span>Design by <a href="#">B. El</a></span>
+        </div>
     </div>
-  </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <!-- <div id="preloader"></div> -->
+</footer>
 
-  <!-- Vendor JS Files -->
-  <script src=" {{ URL::asset('vendor/jquery/jquery.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/php-email-form/validate.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/waypoints/jquery.waypoints.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/counterup/jquery.counterup.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/typed.js/typed.min.js') }}"></script>
-  <script src=" {{ URL::asset('vendor/venobox/venobox.min.js') }}"></script>
-  <script src=" {{ URL::asset('js/masonry.pkgd.min.js') }}"></script>
-  <script src=" {{ URL::asset('js/modernizr.custom.js') }}"></script>
-  <script src=" {{ URL::asset('js/imagesloaded.js') }}"></script>
-  <script src=" {{ URL::asset('js/classie.js') }}"></script>
-  <script src=" {{ URL::asset('js/aos.js') }}"></script>
-  <script type="text/javascript">
-    alert('Hello');
-  </script>
 
-  <!-- Template Main JS File -->
-  <script src=" {{ URL::asset('js/main.js') }}"></script>
+<!-- photoswipe background
+================================================== -->
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                "Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+            "Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div> <!-- end photoSwipe background -->
+
+
+<!-- Java Script
+================================================== -->
+<script src="{{ URL::asset('js/jquery-3.2.1.min.js')  }}"></script>
+<script src="{{ URL::asset('js/plugins.js')  }}"></script>
+<script src="{{ URL::asset('js/main.js')  }}"></script>
+<script>
+    const ImageLoop = (() => {
+        let s;
+
+        return {
+            settings() {
+                return {
+                    image: document.querySelectorAll('.service__img'),
+                    link: document.querySelectorAll('.service__link'),
+                    intervalTime: 1000
+                };
+            },
+
+            init() {
+                s = this.settings();
+                this.bindEvents();
+            },
+
+            bindEvents() {
+                this.hideImg();
+                this.hoverImg();
+            },
+
+            hideImg() {
+                [].forEach.call(s.image, img => {
+                    [].forEach.call(img.children, (moreImg, idx) => {
+                        if (idx !== 0) {
+                            moreImg.style.display = 'none';
+                        }
+                    });
+                });
+            },
+
+            hoverImg() {
+                [].forEach.call(s.link, link => {
+                    let interval;
+                    let count = 0;
+
+                    link.addEventListener('mouseenter', e => {
+                        const target = e.target.children[0];
+                        // Idx 1 because of the span tag/preloader
+                        const img = target.children[1].children;
+                        const length = img.length;
+
+                        interval = setInterval(() => {
+                            img[count].style.display = 'none';
+
+                            if (count === length - 1) {
+                                count = 0;
+                            } else {
+                                count++;
+                            }
+
+                            img[count].style.display = 'block';
+                        }, s.intervalTime);
+                    });
+
+                    link.addEventListener('mouseleave', () => {
+                        clearInterval(interval);
+                    });
+                });
+            }
+        };
+    })();
+
+    ImageLoop.init();
+
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
 
 </body>
-
-</html>

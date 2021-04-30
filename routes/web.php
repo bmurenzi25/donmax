@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Service;
+use App\Testimonial;
+use App\Project;
+use App\Client;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +17,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home',
+    [
+        'services'     => App\Service::all(),
+        'testimonials' => App\Testimonial::all(),
+        'clients'      => App\Client::all(),
+    ]
+    );
 });
 
-Route::get('/serviced', function() {
-	return view('service');
+Route::get('/service/{id}', function($id) {
+//    $project_data = Project::where('id',$id)->get();
+	return view('service', ['service_id' => $id]);
 })->name('serviced');
 
 
