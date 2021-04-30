@@ -2,136 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7612198f-db83-4655-a224-20402420a917" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/emails.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/set.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/artworks/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/artworks/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/artworks/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/artworks/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/artworks/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/artworks/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg/IMG_1413.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg/contact.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg/homeman.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg/homeman_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bg/service.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/Clients logos-08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/Clients logos-09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/Clients logos-12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clients/Clients logos-15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/clientslogos.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/contact.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/counters-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/illustration.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/intro-bg - Copy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/intro-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/overlay-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/photos_3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/portfolio-details-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/portfolio-details-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/post-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/post-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/team/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/team/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/team/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/team/4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/work-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/work-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/work-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/work-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/work-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/work-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/AnimOnScroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/aos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/classie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/imagesloaded.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/masonry.pkgd.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modernizr.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/counterup/jquery.counterup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/counterup/jquery.counterup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/css/font-awesome.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/ionicons/css/ionicons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/ionicons/css/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/ionicons/fonts/ionicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/ionicons/fonts/ionicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/ionicons/fonts/ionicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/ionicons/fonts/ionicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery.easing/jquery.easing.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.theme.default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.theme.green.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.theme.green.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/assets/owl.video.play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/owl.carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/owl.carousel/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/php-email-form/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/typed.js/typed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/typed.js/typed.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/typed.js/typed.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/venobox/venobox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/venobox/venobox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/venobox/venobox.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/venobox/venobox.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/waypoints/jquery.waypoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/project.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/service.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/service.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +205,7 @@
       <workItem from="1619621039764" duration="5255000" />
       <workItem from="1619632955867" duration="579000" />
       <workItem from="1619767864752" duration="4154000" />
-      <workItem from="1619790272096" duration="723000" />
+      <workItem from="1619790272096" duration="1837000" />
     </task>
     <servers />
   </component>
