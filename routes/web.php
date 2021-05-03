@@ -5,6 +5,7 @@ use App\Service;
 use App\Testimonial;
 use App\Project;
 use App\Client;
+use App\Team;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,7 @@ Route::get('/', function () {
         'services'     => App\Service::all(),
         'testimonials' => App\Testimonial::all(),
         'clients'      => App\Client::all(),
+        'team_members' => App\Team::all(),
     ]
     );
 });
@@ -29,7 +31,15 @@ Route::get('/', function () {
 Route::get('/service/{id}', function($id) {
 //    $project_data = Project::where('id',$id)->get();
 	return view('service', ['service_id' => $id]);
-})->name('serviced');
+})->name('service');
+
+Route::get('/project/{id}', function($id) {
+    return view('project',
+    [
+        'project' => Project::find($id),
+    ]
+    );
+})->name('project');
 
 
 Route::group(['prefix' => 'admin'], function () {

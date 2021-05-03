@@ -15,6 +15,21 @@
 
     <!-- CSS
     ================================================== -->
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+        rel="stylesheet"
+    />
     {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">--}}
     <link rel="stylesheet" href="{{ URL::asset('css/base.css')  }}">
     <link rel="stylesheet" href="{{ URL::asset('css/vendor.css')  }}">
@@ -63,10 +78,10 @@
         <div class="header-nav__content">
 
             <ul class="header-nav__list">
-                <li><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll"  href="#about" title="about">About US</a></li>
-                <li><a class="smoothscroll"  href="#services" title="services">Our Services</a></li>
-                <li><a class="smoothscroll"  href="#contact" title="contact">Contact US</a></li>
+                <li><a class="smoothscroll" href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About US</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">Our Services</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact">Contact US</a></li>
             </ul>
 
             <ul class="header-nav__social">
@@ -91,130 +106,39 @@
 
 </header> <!-- end s-header -->
 
-<!-- works
-================================================== -->
-<section id="works" class="s-works target-section">
 
+<img src="{{ URL::asset(Voyager::image( \App\Service::find($service_id)->image )) }}" alt="">
+<section id="works" class="s-works target-section" style="margin-bottom: 50px">
     <div class="row section-header has-bottom-sep narrow target-section" data-aos="fade-up">
         <div class="col-full">
             <h3 class="subhead">{{ \App\Service::find($service_id)->name }}</h3>
+
             <h1 class="display-1">
                 {{ \App\Service::find($service_id)->description ?? 'We are good in everything we do, Browse our projects down below!' }}
             </h1>
         </div>
-    </div> <!-- end section-header -->
-
-    <div class="row masonry-wrap">
-
-        <div class="masonry">
-            @foreach(\App\Service::find($service_id)->projects as $project)
-                <div class="masonry__brick" data-aos="fade-up">
-                <div class="item-folio">
-                    <div class="item-folio__thumb">
-                        <a href="{{ URL::asset(Voyager::image($project->image)) }}" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                            <img src="{{ URL::asset(Voyager::image($project->image)) }}"
-                                 srcset="{{ URL::asset(Voyager::image($project->image)) }} 1x, {{ URL::asset(Voyager::image($project->image)) }} 2x" alt="">
-                        </a>
-                    </div>
-
-                    <div class="item-folio__text">
-                        <h3 class="item-folio__title">
-                            {{ $project->name }}
-                        </h3>
-                        <p class="item-folio__cat">
-                            Branding
-                        </p>
-                    </div>
-
-                    <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                        <i class="icon-link"></i>
-                    </a>
-
-                    <div class="item-folio__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-
-                </div>
-            </div> <!-- end masonry__brick -->
-            @endforeach
-
-        </div> <!-- end masonry -->
-
-    </div> <!-- end masonry-wrap -->
-
-</section> <!-- end s-works -->
-
-
-<!-- clients
-================================================== -->
-<section id="clients" class="s-clients target-section darker">
-
-    <div class="grid-overlay">
-        <div></div>
     </div>
-
-    <div class="row section-header text-center narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Our Clients</h3>
-            <h1 class="display-1">Who we have worked with</h1>
-        </div>
-    </div> <!-- end section-header -->
-
-</section> <!-- end s-clients -->
-
-<section class="customer-logos slider">
-    <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-    <div class="slide"><img src="http://www.webcoderskull.com/img/logo.png"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+    <div class="row">
+        @if(count(\App\Service::find($service_id)->projects))
+            @foreach(\App\Service::find($service_id)->projects as $project)
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-up">
+                    <div class="hovereffect">
+                        <img
+                            src="{{ URL::asset(Voyager::image($project->image)) }}"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt=""
+                        />
+                        <div class="overlay">
+                            <h2>{{ $project->name }}</h2>
+                            <a class="info" href="{{ url('project', $project->id) }}">Open Project</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        @endif
+    </div>
 </section>
 
-{{--Testimonies goes here--}}
-
-<section id="contact" class="s-styles">
-
-    <div class="row">
-
-        <div class="col-six tab-full">
-
-            <h3> Leave US a Message </h3>
-
-            <form>
-                <div>
-                    <label for="sampleInput">Your email</label>
-                    <input class="full-width" type="email" placeholder="test@gmail.com" id="sampleInput">
-                </div>
-
-                <label for="exampleMessage">Type your Message</label>
-                <textarea class="full-width" placeholder="Your message" id="exampleMessage"></textarea>
-
-                <input class="btn--primary full-width" type="submit" value="Submit">
-
-            </form>
-
-        </div>
-
-        <div class="col-six tab-full">
-
-            <h3>Map Directions</h3>
-
-            <div style="width: 100%">
-                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=kk%20720%20st%2022+(Don%20Max%20Creative)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            </div>
-
-        </div>
-
-    </div> <!-- end row -->
-
-</section> <!-- end styles -->
-
-<!-- footer
-================================================== -->
 <footer>
     <div class="row">
         <div class="col-full ss-copyright">
@@ -241,8 +165,12 @@
 
         <div class="pswp__ui pswp__ui--hidden">
             <div class="pswp__top-bar">
-                <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title=
+                "Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title=
                 "Zoom in/out"></button>
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
@@ -254,7 +182,9 @@
             </div>
             <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                 <div class="pswp__share-tooltip"></div>
-            </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title=
             "Next (arrow right)"></button>
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
@@ -271,6 +201,7 @@
 <script src="{{ URL::asset('js/jquery-3.2.1.min.js')  }}"></script>
 <script src="{{ URL::asset('js/plugins.js')  }}"></script>
 <script src="{{ URL::asset('js/main.js')  }}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 <script>
     const ImageLoop = (() => {
         let s;
@@ -341,7 +272,7 @@
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.customer-logos').slick({
             slidesToShow: 6,
             slidesToScroll: 1,

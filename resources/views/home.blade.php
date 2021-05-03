@@ -67,6 +67,7 @@
                 <li><a class="smoothscroll"  href="#about" title="about">About US</a></li>
                 <li><a class="smoothscroll"  href="#services" title="services">Our Services</a></li>
                 <li><a class="smoothscroll"  href="#clients" title="contact">Our Clients</a></li>
+                <li><a class="smoothscroll"  href="#team" title="contact">Meet our Team</a></li>
                 <li><a class="smoothscroll"  href="#contact" title="contact">Contact US</a></li>
             </ul>
 
@@ -167,51 +168,6 @@
         </div>
     </div> <!-- end about-desc -->
 
-    <div class="row bit-narrow">
-
-        <div class="about-process process block-1-2 block-tab-full">
-
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">OUR HISTORY</h4>
-                    <p>
-                        We started in 2018 as a design and Illustration studio but as our clients were meeting different problems that we believe pour skills could help;
-                        We stepped out for help by offering problem-solving services.
-                    </p>
-                </div>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">ABOUT US</h4>
-                    <p>
-                        We help companies, institutions, organizations and brand to communicate to their audience through different
-                        ways like Branding, Graphic Design, UI/UX Design, Website developing, Illustrations and Animations.
-                    </p>
-                </div>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">OBJECTIVE</h4>
-                    <p>
-                        Our main objective is to offer you services that fit your budget and always focusing on helping you shape
-                        a strong brand identity that can take your business to the next level.
-                    </p>
-                </div>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__text">
-                    <h4 class="item-title">PRINCIPLES</h4>
-                    <p>
-                        We and our clients are partners we do the job for the audience, We help you to reach and communicate with
-                        your audience visually, Teamwork is the key to success.
-                    </p>
-                </div>
-            </div>
-
-        </div> <!-- end process -->
-
-    </div> <!-- end row -->
-
 </section> <!-- end s-about -->
 
 
@@ -230,28 +186,30 @@
     </div> <!-- end section-header -->
 
     <div class="row bit-narrow services block-1-2 block-tab-full">
-        @if(count($services) > 0)
-            @foreach($services as $service)
+        <div class="container">
+            @if(count($services) > 0)
+                @foreach($services as $service)
 
-                    <div class="item-service__text" data-aos="fade-up">
-                        <a href="{{ url('/service',$service->id) }}">
-                            <h3 class="item-title">{{ $service->name }}</h3>
-                        </a>
-                        <a class="service__link" href="{{ url('/service',$service->id) }}">
-                            <div class="service__img-container">
-                                <span class="preloader"></span>
-                                <figure class="service__img" style="margin: 1em 0px;">
-                                    <img class="absolute-bg" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" style="width: 100%; height: 550px;"/>
-                                    @foreach($service->projects as $project)
-                                        <img class="absolute-bg" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" style="width: 100%; height: 550px;"/>
-                                    @endforeach
-                                </figure>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="item-service__text mr-2" data-aos="fade-up">
+                            <a href="{{ url('/service',$service->id) }}">
+                                <h3 class="item-title">{{ $service->name }}</h3>
+                            </a>
+                            <a class="service__link" href="{{ url('/service',$service->id) }}">
+                                <div class="service__img-container" style="margin-right: 40px">
+                                    <span class="preloader"></span>
+                                    <figure class="service__img" style="margin: 1em 0px;">
+                                        <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" />
+                                        @foreach($service->projects as $project)
+                                            <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" />
+                                        @endforeach
+                                    </figure>
+                                </div>
+                            </a>
+                        </div>
 
-            @endforeach
-        @endif
+                @endforeach
+            @endif
+        </div>
     </div> <!-- end services -->
 
 
@@ -316,6 +274,43 @@
 
 </section> <!-- end s-clients -->
 
+<!-- Section: Team -->
+<section class="team-section text-center my-5" id="team">
+    <div class="row section-header text-center narrow" data-aos="fade-up">
+        <div class="col-full" style="margin-top: 30px">
+            <h3 class="subhead mt-3">Our TEAM</h3>
+            <h1 class="display-1">The Brains Behind our creativity!</h1>
+        </div>
+    </div> <!-- end section-header -->
+
+    <!-- Grid row -->
+    <div class="row text-center">
+        <div class="team-slide">
+
+            @if(count($team_members))
+                @foreach($team_members as $team_member)
+
+                    <div class="col-md-4 mb-md-0 mb-5 slide">
+                        <div class="avatar mx-auto">
+                            <img src="{{ URL::asset(Voyager::image($team_member->photo)) }}" class="rounded z-depth-1-half" alt="Sample avatar">
+                        </div>
+                        <h4 class="font-weight-bold dark-grey-text my-4">{{ $team_member->name ?? 'Anonymous' }}</h4>
+                        <h6 class="text-uppercase grey-text mb-3"><strong>{{ $team_member->role ?? 'Member' }}</strong></h6>
+                        <!-- Facebook-->
+                        <a type="button" href="#" class="btn-floating btn-sm mx-1 mb-0 btn-fb">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                @endforeach
+            @endif
+        </div>
+
+    </div>
+    <!-- Grid row -->
+
+</section>
+<!-- Section: Team -->
 
 <section id="contact" class="s-styles">
 
@@ -488,6 +483,31 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.team-slide').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2500,
             arrows: false,
             dots: false,
             pauseOnHover: false,
