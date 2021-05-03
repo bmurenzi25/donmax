@@ -63,10 +63,7 @@
         <div class="header-nav__content">
 
             <ul class="header-nav__list">
-                <li><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll"  href="#about" title="about">About US</a></li>
-                <li><a class="smoothscroll"  href="#services" title="services">Our Services</a></li>
-                <li><a class="smoothscroll"  href="#contact" title="contact">Contact US</a></li>
+                <li><a class="smoothscroll"  href="{{ url('/') }}" title="home">Home</a></li>
             </ul>
 
             <ul class="header-nav__social">
