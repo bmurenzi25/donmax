@@ -15,7 +15,8 @@
 
     <!-- CSS
     ================================================== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ URL::asset('css/base.css')  }}">
     <link rel="stylesheet" href="{{ URL::asset('css/vendor.css')  }}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css')  }}">
@@ -64,12 +65,12 @@
         <div class="header-nav__content">
 
             <ul class="header-nav__list">
-                <li><a class="smoothscroll"  href="{{ url('/') }}" title="home">Home</a></li>
-                <li><a class="smoothscroll"  href="#about" title="about">About US</a></li>
-                <li><a class="smoothscroll"  href="#services" title="services">Our Services</a></li>
-                <li><a class="smoothscroll"  href="#clients" title="contact">Our Clients</a></li>
-                <li><a class="smoothscroll"  href="#team" title="contact">Meet our Team</a></li>
-                <li><a class="smoothscroll"  href="#contact" title="contact">Contact US</a></li>
+                <li><a class="smoothscroll" href="{{ url('/') }}" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About US</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">Our Services</a></li>
+                <li><a class="smoothscroll" href="#clients" title="contact">Our Clients</a></li>
+                <li><a class="smoothscroll" href="#team" title="contact">Meet our Team</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact">Contact US</a></li>
             </ul>
 
             <ul class="header-nav__social">
@@ -77,7 +78,8 @@
                     <a href="#0" target="_blank"><i class="fab fa-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </li>
             </ul>
 
@@ -94,7 +96,8 @@
 
 <!-- home
 ================================================== -->
-<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg"
+         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
     <div class="grid-overlay">
         <div></div>
@@ -134,7 +137,8 @@
             <a href="#0" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
         </li>
         <li>
-            <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram"
+                                                                                     aria-hidden="true"></i><span>Instagram</span></a>
         </li>
     </ul> <!-- end home-social -->
 
@@ -160,7 +164,8 @@
                 At Don Max creative, We help companies,institutions and brand to be visible in this
                 new digital world and connect with their audience through Branding, design,digital marketing and website
                 developing.
-                “Briefly we help businesses to grow sales and visibility through branding strategies and digital marketing“
+                “Briefly we help businesses to grow sales and visibility through branding strategies and digital
+                marketing“
             </p>
             <p class="lead">
                 “Doing business without advertising is like winking at a girl in the dark.”
@@ -208,32 +213,32 @@
         </div>
     </div>
 
-{{--    <div class="row">--}}
-{{--        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-up">--}}
-{{--            @if(count($services) > 0)--}}
-{{--                @foreach($services as $service)--}}
+    {{--    <div class="row">--}}
+    {{--        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-up">--}}
+    {{--            @if(count($services) > 0)--}}
+    {{--                @foreach($services as $service)--}}
 
-{{--                        <div class="item-service__text" data-aos="fade-up">--}}
-{{--                            <a href="{{ url('/service',$service->id) }}">--}}
-{{--                                <h3 class="item-title">{{ $service->name }}</h3>--}}
-{{--                            </a>--}}
-{{--                            <a class="service__link" href="{{ url('/service',$service->id) }}">--}}
-{{--                                <div class="service__img-container" style="margin-right: 40px">--}}
-{{--                                    <span class="preloader"></span>--}}
-{{--                                    <figure class="service__img" style="margin: 1em 0px;">--}}
-{{--                                        <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" />--}}
-{{--                                        @foreach($service->projects as $project)--}}
-{{--                                            <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" />--}}
-{{--                                        @endforeach--}}
-{{--                                    </figure>--}}
-{{--                                </div>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
+    {{--                        <div class="item-service__text" data-aos="fade-up">--}}
+    {{--                            <a href="{{ url('/service',$service->id) }}">--}}
+    {{--                                <h3 class="item-title">{{ $service->name }}</h3>--}}
+    {{--                            </a>--}}
+    {{--                            <a class="service__link" href="{{ url('/service',$service->id) }}">--}}
+    {{--                                <div class="service__img-container" style="margin-right: 40px">--}}
+    {{--                                    <span class="preloader"></span>--}}
+    {{--                                    <figure class="service__img" style="margin: 1em 0px;">--}}
+    {{--                                        <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" />--}}
+    {{--                                        @foreach($service->projects as $project)--}}
+    {{--                                            <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" />--}}
+    {{--                                        @endforeach--}}
+    {{--                                    </figure>--}}
+    {{--                                </div>--}}
+    {{--                            </a>--}}
+    {{--                        </div>--}}
 
-{{--                @endforeach--}}
-{{--            @endif--}}
-{{--        </div>--}}
-{{--    </div> <!-- end services -->--}}
+    {{--                @endforeach--}}
+    {{--            @endif--}}
+    {{--        </div>--}}
+    {{--    </div> <!-- end services -->--}}
 
 
 </section> <!-- end s-services -->
@@ -315,10 +320,12 @@
 
                     <div class="col-md-4 mb-md-0 mb-5 slide">
                         <div class="avatar mx-auto">
-                            <img src="{{ URL::asset(Voyager::image($team_member->photo)) }}" class="rounded z-depth-1-half" alt="Sample avatar">
+                            <img src="{{ URL::asset(Voyager::image($team_member->photo)) }}"
+                                 class="rounded z-depth-1-half" alt="Sample avatar">
                         </div>
                         <h4 class="font-weight-bold dark-grey-text my-4">{{ $team_member->name ?? 'Anonymous' }}</h4>
-                        <h6 class="text-uppercase grey-text mb-3"><strong>{{ $team_member->role ?? 'Member' }}</strong></h6>
+                        <h6 class="text-uppercase grey-text mb-3"><strong>{{ $team_member->role ?? 'Member' }}</strong>
+                        </h6>
                         <!-- Facebook-->
                         <a type="button" href="#" class="btn-floating btn-sm mx-1 mb-0 btn-fb">
                             <i class="fab fa-instagram"></i>
@@ -360,7 +367,8 @@
                 </div>
 
                 <label for="exampleMessage">Type your Message</label>
-                <textarea class="full-width" placeholder="Your message" name="contact_message" id="exampleMessage"></textarea>
+                <textarea class="full-width" placeholder="Your message" name="contact_message"
+                          id="exampleMessage"></textarea>
 
                 <input class="btn--primary full-width" type="submit" value="Submit">
 
@@ -373,7 +381,8 @@
             <h3>Map Directions</h3>
 
             <div style="width: 100%">
-                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=kk%20720%20st%2022+(Don%20Max%20Creative)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=kk%20720%20st%2022+(Don%20Max%20Creative)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </div>
 
         </div>
@@ -410,8 +419,12 @@
 
         <div class="pswp__ui pswp__ui--hidden">
             <div class="pswp__top-bar">
-                <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title=
+                "Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title=
                 "Zoom in/out"></button>
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
@@ -423,7 +436,9 @@
             </div>
             <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                 <div class="pswp__share-tooltip"></div>
-            </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title=
             "Next (arrow right)"></button>
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
@@ -510,7 +525,7 @@
 {{--</script>--}}
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.customer-logos').slick({
             slidesToShow: 6,
             slidesToScroll: 1,
@@ -535,7 +550,7 @@
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.team-slide').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -560,7 +575,7 @@
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.service-slide').slick({
             slidesToShow: 3,
             slidesToScroll: 1,

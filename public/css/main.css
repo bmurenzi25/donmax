@@ -3926,6 +3926,7 @@ footer a {
     height: 80%;
     left: 10%;
     top: 10%;
+    color: #fff;
     border-bottom: 1px solid #FFF;
     border-top: 1px solid #FFF;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -3941,6 +3942,7 @@ footer a {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+    color: #fff;
 }
 
 .hovereffect img {
@@ -3962,7 +3964,7 @@ footer a {
     position: relative;
     font-size: 17px;
     background-color: transparent;
-    color: #0078ff;
+    color: #fff;
     padding: 1em 0;
     opacity: 0;
     filter: alpha(opacity=0);
