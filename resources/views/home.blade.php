@@ -66,11 +66,11 @@
 
             <ul class="header-nav__list">
                 <li><a class="smoothscroll" href="{{ url('/') }}" title="home">Home</a></li>
-                <li><a class="smoothscroll" href="#about" title="about">About US</a></li>
-                <li><a class="smoothscroll" href="#services" title="services">Our Services</a></li>
-                <li><a class="smoothscroll" href="#clients" title="contact">Our Clients</a></li>
-                <li><a class="smoothscroll" href="#team" title="contact">Meet our Team</a></li>
-                <li><a class="smoothscroll" href="#contact" title="contact">Contact US</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">Work</a></li>
+                <li><a class="smoothscroll" href="#clients" title="contact">Clients</a></li>
+                <li><a class="smoothscroll" href="#team" title="contact">Team</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
             </ul>
 
             <ul class="header-nav__social">

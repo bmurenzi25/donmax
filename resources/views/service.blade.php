@@ -81,12 +81,12 @@
                 <li><a class="smoothscroll" href="{{ url('/') }}" title="home">Home</a></li>
             </ul>
 
-            <ul class="home-social">
+            <ul class="header-nav__social">
                 <li>
-                    <a href="#0" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+                    <a href="#0"><i class="fab fa-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                    <a href="#0"><i class="fab fa-instagram"></i></a>
                 </li>
             </ul>
 
