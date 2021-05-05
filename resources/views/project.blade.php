@@ -63,15 +63,12 @@
         <div class="header-nav__content">
 
             <ul class="header-nav__list">
-                <li><a class="smoothscroll"  href="{{ url('/') }}" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="{{ url('/') }}" title="home">Home</a></li>
             </ul>
 
             <ul class="header-nav__social">
                 <li>
                     <a href="#0"><i class="fab fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
                     <a href="#0"><i class="fab fa-instagram"></i></a>
@@ -95,7 +92,7 @@
 
     <div class="row section-header has-bottom-sep narrow target-section" data-aos="fade-up">
         <div class="col-full">
-            <h3 class="subhead">{{ $project->name }}</h3>
+            <h3 class="subhead">{{ $project->name ?? 'No Name'}}</h3>
             <h1 class="display-1">
                 {{ $project->description ?? 'We are good in everything we do, Browse our projects down below!' }}
             </h1>
@@ -105,23 +102,26 @@
     <div class="row masonry-wrap">
 
         <div class="masonry">
+
             @foreach(json_decode($project->files) as $file)
                 <div class="masonry__brick" data-aos="fade-up">
                     <div class="item-folio">
                         <div class="item-folio__thumb">
-                            <a href="{{ URL::asset(Voyager::image($file)) }}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                            <a href="{{ URL::asset(Voyager::image($file)) }}" class="thumb-link"
+                               title="{{ $project->name ?? 'No Name Project'}}" data-size="1050x700">
                                 <img src="{{ URL::asset(Voyager::image($file)) }}"
-                                     srcset="{{ URL::asset(Voyager::image($file)) }} 1x, {{ URL::asset(Voyager::image($file)) }} 2x" alt="">
+                                     srcset="{{ URL::asset(Voyager::image($file)) }} 1x, {{ URL::asset(Voyager::image($file)) }} 2x"
+                                     alt="">
                             </a>
                         </div>
 
                         <div class="item-folio__text">
                             <h3 class="item-folio__title">
-                                {{ $project->name }}
+                                {{ $project->name ?? 'No Name Project'}}
                             </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
+                            {{--                                <p class="item-folio__cat">--}}
+                            {{--                                    {{ $project>service->name }}--}}
+                            {{--                                </p>--}}
                         </div>
                     </div>
                 </div> <!-- end masonry__brick -->
@@ -161,8 +161,12 @@
 
         <div class="pswp__ui pswp__ui--hidden">
             <div class="pswp__top-bar">
-                <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title=
+                "Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title=
                 "Zoom in/out"></button>
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
@@ -174,7 +178,9 @@
             </div>
             <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                 <div class="pswp__share-tooltip"></div>
-            </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title=
             "Next (arrow right)"></button>
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
@@ -261,7 +267,7 @@
 </script>
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.customer-logos').slick({
             slidesToShow: 6,
             slidesToScroll: 1,

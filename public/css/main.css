@@ -2033,7 +2033,7 @@ body.menu-is-open {
   content: "";
   width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  /*background-color: rgba(0, 0, 0, 0.3);*/
   opacity: .5;
   z-index: 3;
   position: absolute;
@@ -2351,6 +2351,16 @@ html.no-csstransitions .home-content__main {
  * responsive:
  * home
  * ------------------------------------------------------------------- */
+@media only screen and (max-width:2560px) {
+    .home-content h1 {
+        font-size: 13rem;
+    }
+
+    .home-content h3 {
+        font-size: 3.7rem;
+    }
+
+}
 @media only screen and (max-width:1600px) {
   .home-content h1 {
     font-size: 10rem;
@@ -2386,11 +2396,6 @@ html.no-csstransitions .home-content__main {
     font-size: 3.2rem;
   }
 
-  .home-content__video {
-    height: 6.6rem;
-    line-height: 6.6rem;
-    vertical-align: middle;
-  }
   .home-content__button {
     margin-top: 7.2rem;
   }
@@ -2422,7 +2427,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .home-content h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .home-content__button .btn {
@@ -2441,11 +2446,11 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width:900px) {
   .home-content h1 {
-    font-size: 12rem;
+    font-size: 7.5rem;
   }
 
   .home-content h3 {
-    font-size: 2.7rem;
+    font-size: 2rem;
   }
 
   .home-social {

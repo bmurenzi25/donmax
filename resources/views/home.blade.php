@@ -323,11 +323,11 @@
             <form>
                 <div>
                     <label for="sampleInput">Your email</label>
-                    <input class="full-width" type="email" placeholder="test@gmail.com" id="sampleInput">
+                    <input class="full-width" type="email" placeholder="test@gmail.com" name="email" id="sampleInput">
                 </div>
 
                 <label for="exampleMessage">Type your Message</label>
-                <textarea class="full-width" placeholder="Your message" id="exampleMessage"></textarea>
+                <textarea class="full-width" placeholder="Your message" name="message" id="exampleMessage"></textarea>
 
                 <input class="btn--primary full-width" type="submit" value="Submit">
 

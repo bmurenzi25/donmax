@@ -81,15 +81,12 @@
                 <li><a class="smoothscroll" href="{{ url('/') }}" title="home">Home</a></li>
             </ul>
 
-            <ul class="header-nav__social">
+            <ul class="home-social">
                 <li>
-                    <a href="#0"><i class="fab fa-facebook"></i></a>
+                    <a href="#0" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
                 </li>
                 <li>
-                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/don_max_creative/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
                 </li>
             </ul>
 
@@ -127,7 +124,7 @@
                         />
                         <div class="overlay">
                             <h2>{{ $project->name }}</h2>
-                            <a class="info" href="{{ url('project', $project->id) }}">Open Project</a>
+                            <a class="info" href="{{ url('project', [$project->id]) }}">Open Project</a>
                         </div>
                     </div>
                 </div>
