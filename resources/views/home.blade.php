@@ -200,7 +200,7 @@
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 slide" data-aos="fade-left">
                         <div class="hovereffect">
                             <img
-                                src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
+                                src="{{ URL::asset(Voyager::image($project->image)) }}"
                                 class="w-100 shadow-1-strong rounded mb-4"
                                 alt=""
                             />
