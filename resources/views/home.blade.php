@@ -166,14 +166,16 @@
                 Illustrations, Animations, .
             </p>
             <div class="row">
-                @foreach($services as $service)
-                    <div class="col-md-4 text-center" data-aos="fade-up">
+                @if(count($services))
+                    @foreach($services as $service)
+                        <div class="col-md-4 text-center" data-aos="fade-up">
                         <span class="service_icon">
                             <img src="{{ URL::asset(Voyager::image($service->image)) }}" alt="">
                         </span>
-                        <h4>{{ $service->name }}</h4>
-                    </div>
-                @endforeach
+                            <h4>{{ $service->name }}</h4>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div> <!-- end about-desc -->
@@ -193,7 +195,7 @@
 
     <div class="row">
         <div class="service-slide">
-            @if(count($services))
+            @if(count($projects))
                 @foreach($projects as $project)
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 slide" data-aos="fade-left">
                         <div class="hovereffect">

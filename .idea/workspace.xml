@@ -34,6 +34,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
@@ -213,7 +214,7 @@
       <workItem from="1620036062443" duration="15316000" />
       <workItem from="1620059475218" duration="1676000" />
       <workItem from="1620116384270" duration="6191000" />
-      <workItem from="1620201744979" duration="21475000" />
+      <workItem from="1620201744979" duration="21856000" />
     </task>
     <servers />
   </component>
