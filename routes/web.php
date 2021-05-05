@@ -25,6 +25,7 @@ Route::get('/', function () {
         'testimonials' => App\Testimonial::all(),
         'clients'      => App\Client::all(),
         'team_members' => App\Team::all(),
+        'projects'     => App\Project::all(),
     ]
     );
 });

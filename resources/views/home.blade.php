@@ -68,7 +68,6 @@
                 <li><a class="smoothscroll" href="{{ url('/') }}" title="home">Home</a></li>
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                 <li><a class="smoothscroll" href="#services" title="services">Work</a></li>
-                <li><a class="smoothscroll" href="#clients" title="contact">Clients</a></li>
                 <li><a class="smoothscroll" href="#team" title="contact">Team</a></li>
                 <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
             </ul>
@@ -153,7 +152,7 @@
         <div class="col-full">
             <h3 class="subhead">This is Us</h3>
             <h1 class="display-1">
-                We are Don Max Creative, We aim to make an Impact through Art and Design.
+                We are Don Max Creative,
             </h1>
         </div>
     </div> <!-- end section-header -->
@@ -161,16 +160,21 @@
     <div class="row bit-narrow" data-aos="fade-up">
         <div class="col-full">
             <p class="lead">
-                At Don Max creative, We help companies,institutions and brand to be visible in this
-                new digital world and connect with their audience through Branding, design,digital marketing and website
-                developing.
-                “Briefly we help businesses to grow sales and visibility through branding strategies and digital
-                marketing“
+                We help companies,institutions and brands to be visible in this new digital world and connect with their
+                audience
+                through different creative ways like: Graphic Design, UI/UX Design, Social media management,
+                Illustrations, Animations, .
             </p>
-            <p class="lead">
-                “Doing business without advertising is like winking at a girl in the dark.”
-                Don Max Creative is your way to accelerate your business towards success.
-            </p>
+            <div class="row">
+                @foreach($services as $service)
+                    <div class="col-md-4 text-center" data-aos="fade-up">
+                        <span class="service_icon">
+                            <img src="{{ URL::asset(Voyager::image($service->image)) }}" alt="">
+                        </span>
+                        <h4>{{ $service->name }}</h4>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div> <!-- end about-desc -->
 
@@ -183,28 +187,24 @@
 
     <div class="row section-header bit-narrow" data-aos="fade-up">
         <div class="col-full">
-            <h3 class="subhead">What we do</h3>
-            <h1 class="display-1">
-                We take pride in what we do. Our services are designed to help
-                your business stand out and turn your ideas into digital realities.
-            </h1>
+            <h3 class="subhead">Works</h3>
         </div>
     </div> <!-- end section-header -->
 
     <div class="row">
         <div class="service-slide">
             @if(count($services))
-                @foreach($services as $service)
+                @foreach($projects as $project)
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 slide" data-aos="fade-left">
                         <div class="hovereffect">
                             <img
-                                src="{{ URL::asset(Voyager::image($service->image)) }}"
+                                src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
                                 class="w-100 shadow-1-strong rounded mb-4"
                                 alt=""
                             />
                             <div class="overlay">
-                                <h2>{{ $service->name }}</h2>
-                                <a class="info" href="{{ url('service', [$service->id]) }}">Explore Projects</a>
+                                <h2>{{ $project->name }}</h2>
+                                <a class="info" href="{{ url('project', [$project->id]) }}">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -242,66 +242,6 @@
 
 
 </section> <!-- end s-services -->
-
-<!-- testimonies
-================================================== -->
-<section class="s-testimonials">
-
-    <div class="testimonials__icon" data-aos="fade-up"></div>
-
-    <div class="row testimonials narrow">
-
-        <div class="col-full testimonials__slider" data-aos="fade-up">
-            @if(count($testimonials))
-                @foreach($testimonials as $testimony)
-
-                    <div class="testimonials__slide">
-                        <p>
-                            {{ $testimony->message ?? 'To be verified before sharing' }}
-                        </p>
-                        <div class="testimonials__author">
-                            {{ $testimony->name ?? 'Anonymous' }}
-                            <span>{{ $testimony->position ?? 'No Position shared' }}</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                @endforeach
-            @endif
-
-        </div> <!-- end testimonials__slider -->
-
-    </div> <!-- end testimonials -->
-
-</section> <!-- end s-testimonials -->
-
-
-<!-- clients
-================================================== -->
-<section id="clients" class="s-clients target-section darker">
-
-    <div class="grid-overlay">
-        <div></div>
-    </div>
-
-    <div class="row section-header text-center narrow" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Our Clients</h3>
-            <h1 class="display-1">Who we have worked with</h1>
-        </div>
-    </div> <!-- end section-header -->
-
-    <section class="customer-logos slider">
-
-        @if(count($clients))
-            @foreach($clients as $client)
-                <div class="slide"><img src="{{ URL::asset(Voyager::image($client->logo)) }}"></div>
-            @endforeach
-        @endif
-
-    </section>
-
-</section> <!-- end s-clients -->
-
 <!-- Section: Team -->
 <section class="team-section text-center my-5" id="team">
     <div class="row section-header text-center narrow" data-aos="fade-up">
@@ -341,6 +281,48 @@
 
 </section>
 <!-- Section: Team -->
+<!-- testimonies
+================================================== -->
+<section class="s-testimonials">
+
+    <div class="testimonials__icon" data-aos="fade-up"></div>
+
+    <div class="row testimonials narrow">
+
+        <div class="col-full testimonials__slider" data-aos="fade-up">
+            @if(count($testimonials))
+                @foreach($testimonials as $testimony)
+
+                    <div class="testimonials__slide">
+                        <p>
+                            {{ $testimony->message ?? 'To be verified before sharing' }}
+                        </p>
+                        <div class="testimonials__author">
+                            {{ $testimony->name ?? 'Anonymous' }}
+                            <span>{{ $testimony->position ?? 'No Position shared' }}</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                @endforeach
+            @endif
+
+        </div> <!-- end testimonials__slider -->
+
+    </div> <!-- end testimonials -->
+
+    <div class="customer-logos slider" style="padding-top: 10rem">
+
+        @if(count($clients))
+            @foreach($clients as $client)
+                <div class="slide"><img src="{{ URL::asset(Voyager::image($client->logo)) }}"></div>
+            @endforeach
+        @endif
+
+    </div>
+
+
+</section> <!-- end s-testimonials -->
+
 
 <section id="contact" class="s-styles">
 
@@ -527,10 +509,35 @@
 <script>
     $(document).ready(function () {
         $('.customer-logos').slick({
-            slidesToShow: 6,
+            slidesToShow: 8,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.service-slide').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2500,
             arrows: false,
             dots: false,
             pauseOnHover: false,
@@ -574,29 +581,6 @@
     });
 </script>
 
-<script>
-    $(document).ready(function () {
-        $('.service-slide').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2500,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-            }]
-        });
-    });
-</script>
+
 @notifyJs
 </body>
