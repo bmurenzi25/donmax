@@ -15,5 +15,7 @@ class emailContactController extends Controller
             ]);
 
         Mail::to('max@donmaxcreative.com')->send(new contactMail($data));
+        emotify('success', 'Thanks, Your contact messages was successfully sent!');
+        return redirect()->back();
     }
 }

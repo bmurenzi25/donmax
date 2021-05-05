@@ -23,6 +23,7 @@
     <!-- script
     ================================================== -->
     <script src="{{ URL::asset('js/modernizr.js')  }}"></script>
+    @notifyCss
 
     <!-- favicons
     ================================================== -->
@@ -138,7 +139,7 @@
     </ul> <!-- end home-social -->
 
 </section> <!-- end s-home -->
-
+@include('notify::messages')
 
 <!-- about
 ================================================== -->
@@ -582,5 +583,5 @@
         });
     });
 </script>
-
+@notifyJs
 </body>
