@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\emailContactController;
 use App\Service;
 use App\Testimonial;
 use App\Project;
@@ -41,6 +42,7 @@ Route::get('/project/{id}', function($id) {
     );
 })->name('project');
 
+Route::post('/contact','App\Http\Controllers\emailContactController@sendMail');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
