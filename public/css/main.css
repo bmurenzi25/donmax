@@ -3908,6 +3908,17 @@ footer a {
     cursor: default;
 }
 
+.hovereffect:hover {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    transform: scale(1.2);
+}
+
 .hovereffect .overlay {
     position: absolute;
     overflow: hidden;

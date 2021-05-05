@@ -185,32 +185,54 @@
         </div>
     </div> <!-- end section-header -->
 
-    <div class="row bit-narrow services block-1-2 block-tab-full">
-        <div class="container">
-            @if(count($services) > 0)
+    <div class="row">
+        <div class="service-slide">
+            @if(count($services))
                 @foreach($services as $service)
-
-                        <div class="item-service__text mr-2" data-aos="fade-up">
-                            <a href="{{ url('/service',$service->id) }}">
-                                <h3 class="item-title">{{ $service->name }}</h3>
-                            </a>
-                            <a class="service__link" href="{{ url('/service',$service->id) }}">
-                                <div class="service__img-container" style="margin-right: 40px">
-                                    <span class="preloader"></span>
-                                    <figure class="service__img" style="margin: 1em 0px;">
-                                        <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" />
-                                        @foreach($service->projects as $project)
-                                            <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" />
-                                        @endforeach
-                                    </figure>
-                                </div>
-                            </a>
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 slide" data-aos="fade-left">
+                        <div class="hovereffect">
+                            <img
+                                src="{{ URL::asset(Voyager::image($service->image)) }}"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt=""
+                            />
+                            <div class="overlay">
+                                <h2>{{ $service->name }}</h2>
+                                <a class="info" href="{{ url('service', [$service->id]) }}">Explore Projects</a>
+                            </div>
                         </div>
-
+                    </div>
                 @endforeach
             @endif
         </div>
-    </div> <!-- end services -->
+    </div>
+
+{{--    <div class="row">--}}
+{{--        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-up">--}}
+{{--            @if(count($services) > 0)--}}
+{{--                @foreach($services as $service)--}}
+
+{{--                        <div class="item-service__text" data-aos="fade-up">--}}
+{{--                            <a href="{{ url('/service',$service->id) }}">--}}
+{{--                                <h3 class="item-title">{{ $service->name }}</h3>--}}
+{{--                            </a>--}}
+{{--                            <a class="service__link" href="{{ url('/service',$service->id) }}">--}}
+{{--                                <div class="service__img-container" style="margin-right: 40px">--}}
+{{--                                    <span class="preloader"></span>--}}
+{{--                                    <figure class="service__img" style="margin: 1em 0px;">--}}
+{{--                                        <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($service->image)) }}" alt="" />--}}
+{{--                                        @foreach($service->projects as $project)--}}
+{{--                                            <img class="absolute-bg img-fluid" src="{{ URL::asset(Voyager::image($project->image)) }}" alt="" />--}}
+{{--                                        @endforeach--}}
+{{--                                    </figure>--}}
+{{--                                </div>--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+
+{{--                @endforeach--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--    </div> <!-- end services -->--}}
 
 
 </section> <!-- end s-services -->
@@ -407,74 +429,74 @@
 <script src="{{ URL::asset('js/jquery-3.2.1.min.js')  }}"></script>
 <script src="{{ URL::asset('js/plugins.js')  }}"></script>
 <script src="{{ URL::asset('js/main.js')  }}"></script>
-<script>
-    const ImageLoop = (() => {
-        let s;
+{{--<script>--}}
+{{--    const ImageLoop = (() => {--}}
+{{--        let s;--}}
 
-        return {
-            settings() {
-                return {
-                    image: document.querySelectorAll('.service__img'),
-                    link: document.querySelectorAll('.service__link'),
-                    intervalTime: 1000
-                };
-            },
+{{--        return {--}}
+{{--            settings() {--}}
+{{--                return {--}}
+{{--                    image: document.querySelectorAll('.service__img'),--}}
+{{--                    link: document.querySelectorAll('.service__link'),--}}
+{{--                    intervalTime: 1000--}}
+{{--                };--}}
+{{--            },--}}
 
-            init() {
-                s = this.settings();
-                this.bindEvents();
-            },
+{{--            init() {--}}
+{{--                s = this.settings();--}}
+{{--                this.bindEvents();--}}
+{{--            },--}}
 
-            bindEvents() {
-                this.hideImg();
-                this.hoverImg();
-            },
+{{--            bindEvents() {--}}
+{{--                this.hideImg();--}}
+{{--                this.hoverImg();--}}
+{{--            },--}}
 
-            hideImg() {
-                [].forEach.call(s.image, img => {
-                    [].forEach.call(img.children, (moreImg, idx) => {
-                        if (idx !== 0) {
-                            moreImg.style.display = 'none';
-                        }
-                    });
-                });
-            },
+{{--            hideImg() {--}}
+{{--                [].forEach.call(s.image, img => {--}}
+{{--                    [].forEach.call(img.children, (moreImg, idx) => {--}}
+{{--                        if (idx !== 0) {--}}
+{{--                            moreImg.style.display = 'none';--}}
+{{--                        }--}}
+{{--                    });--}}
+{{--                });--}}
+{{--            },--}}
 
-            hoverImg() {
-                [].forEach.call(s.link, link => {
-                    let interval;
-                    let count = 0;
+{{--            hoverImg() {--}}
+{{--                [].forEach.call(s.link, link => {--}}
+{{--                    let interval;--}}
+{{--                    let count = 0;--}}
 
-                    link.addEventListener('mouseenter', e => {
-                        const target = e.target.children[0];
-                        // Idx 1 because of the span tag/preloader
-                        const img = target.children[1].children;
-                        const length = img.length;
+{{--                    link.addEventListener('mouseenter', e => {--}}
+{{--                        const target = e.target.children[0];--}}
+{{--                        // Idx 1 because of the span tag/preloader--}}
+{{--                        const img = target.children[1].children;--}}
+{{--                        const length = img.length;--}}
 
-                        interval = setInterval(() => {
-                            img[count].style.display = 'none';
+{{--                        interval = setInterval(() => {--}}
+{{--                            img[count].style.display = 'none';--}}
 
-                            if (count === length - 1) {
-                                count = 0;
-                            } else {
-                                count++;
-                            }
+{{--                            if (count === length - 1) {--}}
+{{--                                count = 0;--}}
+{{--                            } else {--}}
+{{--                                count++;--}}
+{{--                            }--}}
 
-                            img[count].style.display = 'block';
-                        }, s.intervalTime);
-                    });
+{{--                            img[count].style.display = 'block';--}}
+{{--                        }, s.intervalTime);--}}
+{{--                    });--}}
 
-                    link.addEventListener('mouseleave', () => {
-                        clearInterval(interval);
-                    });
-                });
-            }
-        };
-    })();
+{{--                    link.addEventListener('mouseleave', () => {--}}
+{{--                        clearInterval(interval);--}}
+{{--                    });--}}
+{{--                });--}}
+{{--            }--}}
+{{--        };--}}
+{{--    })();--}}
 
-    ImageLoop.init();
+{{--    ImageLoop.init();--}}
 
-</script>
+{{--</script>--}}
 
 <script>
     $(document).ready(function(){
@@ -504,6 +526,31 @@
 <script>
     $(document).ready(function(){
         $('.team-slide').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.service-slide').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
