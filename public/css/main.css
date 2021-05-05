@@ -1727,6 +1727,7 @@ body.menu-is-open {
   display: block;
   color: #FFFFFF;
   position: relative;
+    text-transform: uppercase;
 }
 
 .header-nav__list a::before {
